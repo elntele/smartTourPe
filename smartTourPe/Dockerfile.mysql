@@ -1,0 +1,21 @@
+FROM mysql:5.7 AS mysqldb
+
+## Label
+LABEL description="mysqldb"
+
+## Variáveis de ambiente
+ENV APP_HOME=/var/lib/mysql
+ENV MYSQL_ALLOW_EMPTY_PASSWORD="yes"
+ENV MYSQL_DATABASE="development"
+ENV MYSQL_USER="development"
+ENV MYSQL_ROOT_PASSWORD="Alterar123"
+ENV MYSQL_PASSWORD="Alterar123"
+
+# ## diretorio de trabalho
+WORKDIR "$APP_HOME"
+
+## portas de acesso
+EXPOSE 3306
+
+# ## cria volume para diretorio padrao
+VOLUME "$APP_HOME"

@@ -1,12 +1,28 @@
+#
+#spring:
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/smarttourpe?createDatabaseIfNotExist=true
+#    username: root
+#    password: root
+
 
 spring:
   jpa:
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.MySQL8Dialect"
   datasource:
-    url: jdbc:mysql://localhost:3306/smarttourpe?createDatabaseIfNotExist=true
-    username: root
-    password: root
+    url: jdbc:mysql://127.0.0.1:3307/smarttourpe?createDatabaseIfNotExist=true
+    username: user
+    password: pass
+
+
+
 
 
 #  spring.jpa.hibernate.ddl-auto=update
